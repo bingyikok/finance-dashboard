@@ -10,7 +10,7 @@ const App = () => {
   return (
     <StockProvider>
       <div>
-        <p><img id="myImage" src="/finance-dashboard/public/budget.png" alt="My Image"></img></p>
+        <p><img id="myImage" src="/public/budget.png" alt="My Image"></img></p>
         <h1>Finance Dashboard</h1>
         <StockForm />
         <h2>Stock List</h2>
