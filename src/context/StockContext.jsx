@@ -11,7 +11,7 @@ export const StockProvider = ({ children }) => {
   };
 
   const updateStockPrices = useCallback(async () => {
-    const apiKey = 'demo'; //2GVLOR8B0BVQIYCQ
+    const apiKey = 'demo'; //2GVLOR8B0BVQIYCQ / demo
     const updatedStocks = await Promise.all(stocks.map(async (stock) => {
       const stockSymbol = stock.symbol.toUpperCase();
       
@@ -24,7 +24,8 @@ export const StockProvider = ({ children }) => {
       } catch (error) {
         alert(`Error fetching price for ${stockSymbol}`);
         //console.error(`Error fetching price for ${stock}:`, error);
-        return { ...stock, currentPrice: null, profitLoss: null };        
+        //return { ...stock, currentPrice: null, profitLoss: null };
+        return;        
       }
     }));
     setStocks(updatedStocks);

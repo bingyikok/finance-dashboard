@@ -10,13 +10,13 @@ const StockList = () => {
   }, [updateStockPrices]);
 
   if (stocks.length === 0) {
-    return <div class="dashboardHeader">No stocks added yet.</div>;
+    return <div className='dashboardHeader'>No stocks added yet.</div>;
   }
-
+  console.log('loop');
   return (
-    <div class='dashboard'>
-        {stocks.map((stock) => (
-          <h2 key={stock.symbol}>
+    <div className='dashboard'>
+        {stocks.map((stock, index) => (
+          <h2 key={`${stock.symbol}-${index}`}>
             <p>Symbol: {stock.symbol.toUpperCase()}</p>
             <p>Quantity: {stock.quantity}</p>
             <p>Purchase Price: {stock.price}</p>
