@@ -12,7 +12,7 @@ const StockList = () => {
   if (stocks.length === 0) {
     return <div className='dashboardHeader'>No stocks added yet.</div>;
   }
-  console.log('loop');
+
   return (
     <div className='dashboard'>
         {stocks.map((stock, index) => (
